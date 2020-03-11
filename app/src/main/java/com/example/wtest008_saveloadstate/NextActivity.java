@@ -99,7 +99,7 @@ public class NextActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString(tagFirstname,etFirstname.getText().toString());
+        outState.putString(tagFirstname,etFirstname.getText().toString()); // save edit field value
         outState.putString(tagLastname,etLastname.getText().toString());
         outState.putString(tagCompiledname,tvCompiledName.getText().toString());
         (Toast.makeText(this,"NextActivity.onSaveInstanceState bundle: " + etFirstname.getText().toString(),Toast.LENGTH_SHORT)).show();
