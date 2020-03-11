@@ -1,0 +1,2 @@
+rootProject.name='WTest008_SaveLoadState'
+include ':app'
