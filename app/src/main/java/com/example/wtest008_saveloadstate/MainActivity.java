@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onOKClick(View view) {
         tvCounter = findViewById(R.id.tvCounter);
-        tvCounter.setText(Integer.toString(11));
+        tvCounter.setText("I like this number: "+Integer.toString(11));
     }
 
     public void btnNextClick(View view) {
@@ -140,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnQuitClick(View view) {
-
         finish();
         System.exit(0);
     }

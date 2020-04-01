@@ -36,7 +36,6 @@ public class NextActivity extends AppCompatActivity {
         if (savedInstanceState!=null) {
             (Toast.makeText(this,"NextActivity.Loading saved state",Toast.LENGTH_SHORT)).show();
             if (savedInstanceState.containsKey(tagFirstname)) {
-//                String str = savedInstanceState.getString(tagFirstname);
                 etFirstname.setText(savedInstanceState.getString(tagFirstname)+" xxx");
             }
             else (Toast.makeText(this,"NextActivity.key not found: "+tagFirstname,Toast.LENGTH_SHORT)).show();
