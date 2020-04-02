@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "MainActivity.onSaveInstanceState bundle: " + outState.toString());
     }
 
-    public void onOKClick(View view) {
+    public void onSetLabelClick(View view) {
         tvCounter = findViewById(R.id.tvCounter);
         tvCounter.setText("I like this number: "+Integer.toString(11));
     }

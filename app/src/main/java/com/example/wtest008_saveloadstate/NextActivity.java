@@ -9,6 +9,7 @@ import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -98,11 +99,14 @@ public class NextActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString(tagFirstname,etFirstname.getText().toString()); // save edit field value
-        outState.putString(tagLastname,etLastname.getText().toString());
-        outState.putString(tagCompiledname,tvCompiledName.getText().toString());
-        (Toast.makeText(this,"NextActivity.onSaveInstanceState bundle: " + etFirstname.getText().toString(),Toast.LENGTH_SHORT)).show();
-        Log.d("NextActivityLog", "NextActivity.onSaveInstanceState bundle: " + outState.toString());
+        Switch swSaveState = findViewById(R.id.swSaveState);
+        if (swSaveState.isChecked()) {
+            outState.putString(tagFirstname, etFirstname.getText().toString());
+            outState.putString(tagLastname, etLastname.getText().toString());
+            outState.putString(tagCompiledname, tvCompiledName.getText().toString());
+            (Toast.makeText(this, "NextActivity.onSaveInstanceState bundle: " + etFirstname.getText().toString(), Toast.LENGTH_SHORT)).show();
+            Log.d("NextActivityLog", "NextActivity.onSaveInstanceState bundle: " + outState.toString());
+        }
     }
 
     public void onBtnSaveClick(View view) {
